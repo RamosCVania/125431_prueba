@@ -2,7 +2,7 @@
 pragma solidity >=0.8.2 <0.9.0;
 
 contract Animal {
-    string public especie;
+    string public especie; //especie
 
     constructor(string memory _especie) {
         especie = _especie;
