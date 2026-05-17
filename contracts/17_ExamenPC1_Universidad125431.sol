@@ -21,7 +21,7 @@ contract Universidad125431 {
     _;
     }
 
-    constructor() {
+    constructor() ejecutarPor125431 {
         dirContrato125431 = address(this);
     }
 
@@ -42,8 +42,33 @@ contract Universidad125431 {
         );
     }
 
-    function contarElementos125431() public view returns(uint) {
+    function contarElementos125431() public view ejecutarPor125431 returns(uint) {
         return alumnos.length;
+    }
+
+    function inactivarElemento125431(uint _posicion)
+    public
+    ejecutarPor125431
+    {
+        alumnos[_posicion].estado = false;
+    }
+
+    function pintarElementosActivos125431()
+    public
+    view
+    ejecutarPor125431
+    {
+        for(uint i = 0; i < alumnos.length; i++) {
+
+            if(alumnos[i].estado == true) {
+
+                console.log(
+                    "Alumno activo:",
+                    alumnos[i].id,
+                    alumnos[i].nombre
+                );
+            }
+        }
     }
 
 }
